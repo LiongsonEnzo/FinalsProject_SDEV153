@@ -11,6 +11,7 @@ header h1 {
     text-align: center;
     font-size: 2.5em;
     margin: 0;
+    padding-left: 5px;
 }
 
 header a {
@@ -19,7 +20,7 @@ header a {
 }
 
 .logo {
-    float: right;
+    float: left;
     width: 120px;
     border-radius: 50em;
 }
@@ -28,6 +29,8 @@ header a {
 nav {
     text-align: center;
     font-size: 1.2em;
+    position: sticky;
+    top: 0;
 }
 nav a {
     text-decoration: none;
@@ -42,8 +45,6 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
-    position: sticky;
-    top: 0;
 }
 nav li {
     float: left;
@@ -68,17 +69,53 @@ body {
     font-family: Verdana, Arial, sans-serif;
     margin: 0;
 }
-
 section {
-    float: left;
-    width: 33%;
-    padding-left: 2em;
-    padding-right: 2em;
-    background-color: #344873;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom,#F5F6E6,#F5F6E6, #CB1112);
 }
+
+section h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    color: #624E21;
+    padding: 35px;
+    margin: 10px;
+}
+section img {
+    width: 50%;
+}
+
+section button {
+    border: none;
+    margin: 60px;
+    padding: 35px 52px;
+    display: flex;
+    font-size: 55px;
+    background-color: #F5F6E6;
+    border-radius: 45px;
+    border: 1px solid #333;
+}
+
+section button a {
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #624E21;
+}
+  
+section button:hover {
+    background-color: #624E21;  
+}
+
+section button:hover a {
+    color: #F5F6E6;
+}
+
+
 footer {
     font-size: .70em;
     font-style: italic;
     text-align: center;
     padding: 1em;
-  }
+}

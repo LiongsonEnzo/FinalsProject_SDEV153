@@ -1,46 +1,74 @@
-* {
-    box-sizing: border-box;
+/* This is the header portion of the code */
+header {
+    background-color: #CB1112;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-body { 
-    background-color: #FC6D4E;
-    color: #666666;
-    font-family: Verdana, Arial, sans-serif;
+
+header h1 { 
+    text-align: center;
+    font-size: 2.5em;
     margin: 0;
 }
+
+header a {
+    text-decoration: none;
+    color: #F5F6E6;
+}
+
+.logo {
+    float: right;
+    width: 120px;
+    border-radius: 50em;
+}
+
+/* This is the nav portion of the code */
 nav {
     text-align: center;
-    background-color: #FFFFFF;
     font-size: 1.2em;
-    float: left;
 }
 nav a {
     text-decoration: none;
 }
-nav a:link {
-    color: #5C7FA3;
-}
-nav a:visited {
-    color: #344873;
-}
 nav a:hover {
-    color: #5C7FA3;
+    background-color: #F5F6E6;
+    color: #624E21;
 }
 nav ul {
-    padding-left: 1em;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
 }
 nav li {
-    padding-top: .5em;
-    padding-bottom: .5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-bottom: 1px solid;
+    float: left;
 }
-h1 { 
+nav li a {
+    display: block;
+    color: #F5F6E6;
     text-align: center;
-    padding: .6em;
-    font-size: 2.5em;
+    padding: 14px 26px;
+    text-decoration: none;
 }
+.active {
+    background-color: #624E21;
+}
+
+/*  */
+* {
+    box-sizing: border-box;
+}
+body { 
+    background-color: #F5F6E6;
+    font-family: Verdana, Arial, sans-serif;
+    margin: 0;
+}
+
 section {
     float: left;
     width: 33%;
@@ -48,3 +76,9 @@ section {
     padding-right: 2em;
     background-color: #344873;
 }
+footer {
+    font-size: .70em;
+    font-style: italic;
+    text-align: center;
+    padding: 1em;
+  }

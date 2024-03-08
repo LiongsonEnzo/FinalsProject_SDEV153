@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASA :: Frequently Asked Questions</title>
+    <meta name="description" content="Discover the vibrant cultural experiences and community engagement at our Asian club. Join us to explore Asian traditions, celebrations, and foster meaningful connections. Learn about our events, initiatives, and how you can get involved. Embrace diversity and join our Asian club today!">
     <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -23,8 +24,37 @@
     </nav>
     
     <main>
-        <section></section>
-        <section></section>
+        <section class="faq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="question">
+                <h2>How can I join the Asian Student Alliance?</h2>
+                <p>To join, simply attend one of our meetings or events and express your interest in becoming a member.</p>
+            </div>
+            <div class="question">
+                <h2>Where can I find more information about the organization?</h2>
+                <p>You can find more information about the Asian Student Alliance on our organization's page on the school website and Instagram page.</p>
+                <!-- Convert the anchor tag into a button -->
+                <button style="float: left;"window.location.href='https://ivylife.ivytech.edu/organization/asa-indianapolis'">ASA Ivy Tech</button>
+                <button style="float: right;"window.location.href='https://www.instagram.com/ivy_tech_asa/'">ASA Instagram</button>
+            </div>
+        </section>
+    
+        <!-- Form Section -->
+        <section class="form-section">
+            <h2>Have more questions or suggestions?</h2>
+            <form id="contactForm">
+                <label for="email">Your Email:</label><br>
+                <input type="email" id="email" name="email" required><br>
+    
+                <label for="suggestions">Your Suggestions:</label><br>
+                <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea><br>
+    
+                <label for="moreQuestions">Do you have more questions?</label><br>
+                <input type="checkbox" id="moreQuestions" name="moreQuestions" value="yes"><br>
+    
+                <input type="submit" value="Submit">
+            </form>
+        </section>
     </main>
 
     <footer>
@@ -37,5 +67,29 @@
         </script>
     </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('contactForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                // Get form data
+                var email = document.getElementById('email').value;
+                var suggestions = document.getElementById('suggestions').value;
+                var moreQuestions = document.getElementById('moreQuestions').checked ? 'Yes' : 'No';
+
+                // You can perform validation here if needed
+
+                // Here you can perform AJAX request to send form data to server
+                // For simplicity, let's just log the form data to console
+                console.log('Email:', email);
+                console.log('Suggestions:', suggestions);
+                console.log('More Questions:', moreQuestions);
+
+                // Optionally, you can reset the form fields after submission
+                form.reset();
+            });
+        });
+    </script>
 </body>
 </html>

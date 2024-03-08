@@ -74,7 +74,12 @@ section {
     align-items: center;
     background-image: linear-gradient(to bottom,#F5F6E6,#F5F6E6, #CB1112);
 }
-
+section p {
+    font-size: 25px;
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+}
 section h1 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 50px;
@@ -86,36 +91,231 @@ section img {
     width: 50%;
 }
 
-section button {
-    border: none;
-    margin: 60px;
-    padding: 35px 52px;
+
+/* Add or update CSS rules for events */
+.event, .video {
     display: flex;
-    font-size: 55px;
-    background-color: #F5F6E6;
-    border-radius: 45px;
-    border: 1px solid #333;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom,#F5F6E6,#F5F6E6, #CB1112);
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-section button a {
+.event h1, .video h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    color: #624E21;
+    margin-bottom: 10px;
+}
+
+.event p, .video p {
+    font-size: 25px;
+    text-align: center;
+    color: #F5F6E6;
+    line-height: 1.5;
+}
+
+.event img, .video video {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-image: linear-gradient(to bottom,#F5F6E6,#F5F6E6);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.faq h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    color: #624E21;
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.question h2 {
+    font-size: 28px;
+    color: #624E21;
+    margin-bottom: 10px;
+}
+
+.question p {
+    font-size: 24px;
+    text-align: center;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+.question button {
+    margin: 10px; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #624E21; 
+    color: #F5F6E6; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.question button:hover {
+    background-color: #CB1112; 
+}
+
+.question a {
+    font-weight: bold;
+    font-size: 20px;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    color: #624E21;
-}
-  
-section button:hover {
-    background-color: #624E21;  
+    color: #CB1112;
 }
 
-section button:hover a {
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom,#F5F6E6,#F5F6E6);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.calendar h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    color: #624E21;
+    margin-bottom: 20px;
+}
+
+/* Style for the table */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #624E21;
     color: #F5F6E6;
 }
+.form-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to bottom,#F5F6E6,#F5F6E6, #CB1112);
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
+.form-section h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+    color: #624E21;
+    margin-bottom: 20px;
+}
 
+/* Style for form elements */
+form {
+    text-align: center;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input[type="email"],
+textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #624E21;
+    color: #F5F6E6;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #CB1112;
+}
 footer {
     font-size: .70em;
     font-style: italic;
     text-align: center;
     padding: 1em;
+}
+
+/* Define your existing styles here */
+
+/* Media query for smaller screens (up to 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em; 
+    }
+
+    header h1 {
+        font-size: 2em; 
+    }
+
+    nav {
+        font-size: 1em; 
+
+    }
+    nav li a {
+        padding: 10px 20px; 
+    }
+    .question button {
+        width: auto; 
+        
+    }
+
+    
+}
+
+/* Media query for larger screens (above 768px) */
+@media (min-width: 769px) {
+    header {
+        padding: 1em; 
+    }
+
+    header h1 {
+        font-size: 2.5em; 
+    }
+
+    nav {
+        font-size: 1.2em; 
+    }
+
+    nav li a {
+        padding: 14px 26px; 
+    }
+
+    
 }

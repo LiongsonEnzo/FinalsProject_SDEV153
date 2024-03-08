@@ -272,9 +272,6 @@ footer {
     padding: 1em;
 }
 
-/* Define your existing styles here */
-
-/* Media query for smaller screens (up to 768px) */
 @media (max-width: 768px) {
     header {
         padding: 0.5em; 
@@ -283,23 +280,39 @@ footer {
     header h1 {
         font-size: 2em; 
     }
-
+    section{
+        display: flex;
+        flex-direction: column;
+    }
     nav {
         font-size: 1em; 
-
+        text-align: center; 
+        position: relative;
     }
+
+    nav ul {
+        flex-direction: column; 
+        padding: 0;
+    }
+
+    nav li {
+        width: 100%; 
+        border-bottom: 1px solid #F5F6E6; 
+    }
+
     nav li a {
-        padding: 10px 20px; 
-    }
-    .question button {
-        width: auto; 
-        
+        padding: 1em 0; 
     }
 
-    
+    nav li:last-child {
+        border-bottom: none; 
+    }
+
+    .question button {
+        width: 100%; 
+    }
 }
 
-/* Media query for larger screens (above 768px) */
 @media (min-width: 769px) {
     header {
         padding: 1em; 
@@ -311,11 +324,22 @@ footer {
 
     nav {
         font-size: 1.2em; 
+        text-align: left; 
+        position: relative;
+    }
+
+    nav ul {
+        flex-direction: row;
+        justify-content: space-between; 
+        padding: 0; 
+    }
+
+    nav li {
+        width: auto; 
+        border-bottom: none; 
     }
 
     nav li a {
         padding: 14px 26px; 
     }
-
-    
 }
